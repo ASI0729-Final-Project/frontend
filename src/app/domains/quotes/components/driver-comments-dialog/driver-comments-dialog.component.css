@@ -1,0 +1,72 @@
+:host {
+    display: block;
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    max-width: 650px;
+    font-family: 'Arial', sans-serif;
+    color: #1f1f1f;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    justify-content: space-between;
+  }
+  
+  .driver-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+  
+  .driver-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .driver-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .reviews,
+  .trips {
+    font-size: 13px;
+    color: #666;
+    margin: 2px 0;
+  }
+  
+  .stars mat-icon {
+    color: #fbc02d;
+    font-size: 18px;
+  }
+  
+  .rating-filter {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: #f9f9f9;
+  }
+  
+  .comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  

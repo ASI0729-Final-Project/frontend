@@ -1,0 +1,36 @@
+<h2>Reserve</h2>
+
+<div class="header">
+  <div>
+    <p class="driver-name">{{data.driver}}</p>
+    <p class="driver-role">Student / Driver</p>
+    <div class="stars">
+      <mat-icon *ngFor="let i of [1,2,3,4,5]">star</mat-icon>
+    </div>
+  </div>
+  <img [src]="mapUrl" alt="Map preview" class="map" />
+
+</div>
+
+<div class="info">
+  <p><strong>Starting Point:</strong> {{ data.origin }}</p>
+  <p><strong>Destination:</strong> {{ data.destination }}</p>
+  <p><strong>Departure Date:</strong> {{ data.date }}</p>
+  <p><strong>Departure Time:</strong> {{ data.time }}</p>
+  <p><strong>Estimated price:</strong> S/.{{ data.price }}</p>
+</div>
+
+<div class="payment">
+  <p><strong>Payment method:</strong></p>
+  <mat-radio-group [(ngModel)]="paymentMethod">
+    <mat-radio-button value="Yape">Yape</mat-radio-button>
+    <mat-radio-button value="Plin">Plin</mat-radio-button>
+    <mat-radio-button value="Sencillo">Sencillo</mat-radio-button>
+  </mat-radio-group>
+</div>
+
+<div class="actions">
+  <button mat-flat-button color="primary" (click)="submit()">Request</button>
+  <button mat-stroked-button (click)="close()">Cancel</button>
+  <button mat-stroked-button color="warn">Report</button>
+</div>

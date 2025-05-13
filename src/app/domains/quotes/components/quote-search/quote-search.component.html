@@ -1,0 +1,28 @@
+<div class="quote-search-container">
+    <div class="input-group">
+        <label>Starting Point</label>
+        <input type="text" placeholder="From" [(ngModel)]="from" />
+    </div>
+  
+    <div class="icon-swap">
+      <mat-icon>swap_vert</mat-icon>
+    </div>
+  
+    <div class="input-group">
+        <label>Destination</label>
+        <input type="text" placeholder="To" [(ngModel)]="to" />
+    </div>
+  
+    <div class="input-group">
+        <label>Departure Date</label>
+        <input type="date" [(ngModel)]="date" />
+    </div>
+  
+    <div class="input-group">
+        <label>Departure Time</label>
+        <input type="time" [(ngModel)]="time" />
+    </div>
+  
+    <button class="find-button" (click)="onSearch()">Find</button>
+  </div>
+  

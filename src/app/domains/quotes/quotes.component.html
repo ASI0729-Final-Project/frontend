@@ -1,0 +1,18 @@
+<h2>Quotes</h2>
+<app-quote-search (search)="onSearchFilter($event)"></app-quote-search>
+<div class="quote-list">
+    <app-quote-card
+        *ngFor="let quote of quotes"
+        [origin]="quote.origin"
+        [destination]="quote.destination"
+        [driver]="quote.driver"
+        [driverImage]="quote.driverImage"
+        [price]="quote.price"
+        [date]="quote.date"
+        [time]="quote.time"
+        [seats]="quote.seats"
+        [licensePlate]="quote.licensePlate"
+        [carBrand]="quote.carBrand"
+        [image]="quote.image"
+    ></app-quote-card>
+</div>

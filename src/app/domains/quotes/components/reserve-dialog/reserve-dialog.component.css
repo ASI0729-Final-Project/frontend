@@ -1,0 +1,71 @@
+:host {
+  display: block;
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 500px;
+  font-family: 'Arial', sans-serif;
+  color: #1f1f1f;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.map {
+  width: 230px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.driver-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+.driver-role {
+  color: green;
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.stars mat-icon {
+  color: #fbc02d;
+  font-size: 18px;
+}
+
+.info {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.info p {
+  margin: 4px 0;
+}
+
+.payment {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}

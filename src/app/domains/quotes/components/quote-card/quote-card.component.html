@@ -1,0 +1,37 @@
+<mat-card class="quote-card">
+    <img mat-card-image [src]="image || 'assets/placeholder.jpg'" alt="Trip Image" />
+    <mat-card-content>
+
+        <div class="route">
+            <strong>{{ origin }}</strong>
+            <mat-icon>arrow_downward</mat-icon>
+            <strong>{{ destination }}</strong>
+        </div>
+  
+      <div class="driver-info">
+        <img class="driver-avatar" [src]="driverImage || 'assets/placeholder.jpg'" alt="Driver Avatar" (click)="openCommentsDialog()" style="cursor: pointer;" />
+        <span><strong>Driver:</strong> {{ driver }}</span>
+      </div>
+      
+  
+      <div class="price">
+        <span>Price:</span> <strong>S/.{{ price }}</strong>
+      </div>
+  
+      <div class="details">
+        <p><strong>Departure Date:</strong> {{ date }}</p>
+        <p><strong>Departure Time:</strong> {{ time }}</p>
+        <p><strong>Seats available:</strong> {{ seats }}</p>
+        <p><strong>License Plate:</strong> {{ licensePlate }}</p>
+        <p><strong>Car Brand:</strong> {{ carBrand }}</p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button disabled>Not Available</button>
+      <button mat-icon-button class="icon-button">
+        <mat-icon>star</mat-icon>
+      </button>
+      <button mat-flat-button color="primary" (click)="openReserveDialog()">Join Trip</button>
+    </mat-card-actions>
+  </mat-card>
+  

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AppToolbarComponent } from "./components/app-toolbar/app-toolbar.component";
+import { AppToolbarComponent } from "./core/components/app-toolbar/app-toolbar.component";
 
 @Component({
   selector: 'app-root',

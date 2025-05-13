@@ -1,0 +1,11 @@
+<div class="comment">
+    <div class="comment-header">
+      <mat-icon>account_circle</mat-icon>
+      <span class="comment-name">{{ name }}</span>
+      <span class="comment-stars">
+        <mat-icon *ngFor="let s of [].constructor(rating)">star</mat-icon>
+      </span>
+    </div>
+    <p class="comment-text">{{ comment }}</p>
+  </div>
+  

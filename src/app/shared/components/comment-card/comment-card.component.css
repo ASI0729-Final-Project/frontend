@@ -1,0 +1,30 @@
+.comment {
+    background-color: #d7eadd;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  
+  .comment-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  
+  .comment-name {
+    flex-grow: 1;
+  }
+  
+  .comment-stars mat-icon {
+    color: #fbc02d;
+    font-size: 18px;
+  }
+  
+  .comment-text {
+    font-size: 14px;
+    margin: 0;
+  }
+  

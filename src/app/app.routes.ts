@@ -6,6 +6,8 @@ import { LoginFormComponent } from './domains/users/components/login-form/login-
 import { RegisterFormComponent } from './domains/users/components/register-form/register-form.component';
 import { PassrecoFormComponent } from './domains/users/components/passreco-form/passreco-form.component';
 import { RequestComponent } from './domains/request/RequestManagementComponent/request.component';
+import { MyProfileComponent } from './domains/users/pages/my-profile/my-profile.component';
+import { ChangePasswordFormComponent } from './domains/users/components/change-password-form/change-password-form.component';
 import { RoutesComponent } from './domains/routess/routess.component';
 import { SupportComponent } from './pages/support/support.component';
 import { ChatComponent } from './pages/chat/chat.component';
@@ -21,5 +23,7 @@ export const routes: Routes = [
     { path: 'login', component: LoginFormComponent },
     { path: 'register', component: RegisterFormComponent },
     { path: 'password-recovery', component: PassrecoFormComponent },
+    { path: 'profile', component: MyProfileComponent },
+    { path: 'change-password', component: ChangePasswordFormComponent },
     { path: "**", redirectTo: '' }
 ];

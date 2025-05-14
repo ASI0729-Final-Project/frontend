@@ -1,3 +1,9 @@
+
+<div class="layout-container">
+  <div class="image-container">
+    <img src="frontend/src/assets/loginimage.JPG" alt="Login" />
+  </div>
+
 <div class="form-container">
   <mat-card>
     <mat-card-header>
@@ -27,7 +33,7 @@
 
         <div class="remember-forgot">
           <mat-checkbox formControlName="remember">{{ 'REMEMBER_ME' | translate }}</mat-checkbox>
-          <a routerLink="/password-recovery">{{ 'FORGOT_PASSWORD' | translate }}</a>
+          <a (click)="openResetDialog()">{{ 'FORGOT_PASSWORD' | translate }}</a>
         </div>
 
         <button 
@@ -52,9 +58,12 @@
 
         <p class="login-link">
           {{ 'HAVE_ACCOUNT' | translate }} 
-          <a routerLink="/register">{{ 'REGISTER' | translate }}</a>
+          <a href="/register" routerLink="/register">{{ 'REGISTER' | translate }}</a>
         </p>
       </form>
     </mat-card-content>
   </mat-card>
+</div>
+
+
 </div>

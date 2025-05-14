@@ -1,0 +1,284 @@
+<div class="request-container">
+  <h1>Request Management</h1>
+
+  <!-- Sección de filtros -->
+  <div class="filter-section-container">
+    <div class="filter-section">
+      <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <mat-select [(ngModel)]="selectedType" name="type">
+          <mat-option *ngFor="let option of filterOptions" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="selectedStatus" name="status">
+          <mat-option *ngFor="let option of statusOptions" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Date Range</mat-label>
+        <input matInput [matDatepicker]="datePicker" name="dateRange">
+        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+        <mat-datepicker #datePicker></mat-datepicker>
+      </mat-form-field>
+
+
+      <button mat-stroked-button
+              (click)="toggleCommentsPopup()"
+              class="view-comments-btn">
+        <mat-icon>comment</mat-icon>
+        View my comment
+      </button>
+
+      <!--comentarios-->
+      <div class="comments-popup" *ngIf="showCommentsPopup">
+        <div class="popup-content">
+          <div class="popup-header">
+            <h3>Comments</h3>
+            <button mat-icon-button (click)="toggleCommentsPopup()">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+
+          <div class="comments-list">
+            <div *ngFor="let comment of comments" class="comment-item">
+              <div class="comment-header">
+                <mat-icon class="user-avatar">account_circle</mat-icon>
+
+                <div class="comment-info">
+                  <span class="author">{{comment.author}}</span>
+                  <div class="rating">
+                    <mat-icon *ngFor="let star of [1,2,3,4,5]"
+                              [class.filled]="star <= comment.rating">
+                      {{star <= comment.rating ? 'star' : 'star_border'}}
+                    </mat-icon>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text">{{comment.text}}</p>
+            </div>
+          </div>
+
+          <div class="new-comment">
+            <mat-form-field appearance="outline">
+              <textarea matInput [(ngModel)]="newComment" placeholder="Add comment"></textarea>
+            </mat-form-field>
+            <div class="new-comment-actions">
+              <div class="rating-input">
+                <span>Rating:</span>
+                <mat-icon *ngFor="let star of [1,2,3,4,5]"
+                          (click)="setNewRating(star)"
+                          [class.filled]="star <= newRating">
+                  {{star <= newRating ? 'star' : 'star_border'}}
+                </mat-icon>
+              </div>
+              <button mat-raised-button color="primary" (click)="addComment()">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="cards-grid">
+
+    <div class="cards-column">
+      <!-- Card 1 -->
+      <mat-card class="request-card">
+        <div class="request-header">
+          <span class="request-status confirmed">Request Confirmed</span>
+          <span class="trip-requests">23 requests for the trip</span>
+        </div>
+        <div class="trip-info">
+          <strong>Trip:</strong> UNI - 24/05 -13:30
+        </div>
+        <div class="passenger-info">
+          <strong>Ana Rios</strong>
+        </div>
+        <div class="request-message">
+          has sent a request, you can review and accept it if you are available for the trip.
+        </div>
+        <div class="request-footer">
+          <span class="sent-date">Sent on 03/03 at 5:45 PM</span>
+          <div class="action-buttons">
+            <button mat-icon-button class="people-btn" matTooltip="People">
+              <mat-icon>people</mat-icon>
+            </button>
+            <button mat-icon-button class="mail-btn" matTooltip="Mail">
+              <mat-icon>mail</mat-icon>
+            </button>
+            <button mat-icon-button class="person-btn" matTooltip="Person">
+              <mat-icon>person</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+
+      <!-- Card 2 -->
+      <mat-card class="request-card">
+        <div class="request-header">
+          <span class="request-status pending">Request Pending</span>
+          <span class="trip-requests">15 requests for the trip</span>
+        </div>
+        <div class="trip-info">
+          <strong>Trip:</strong> UNI - 25/05 -09:15
+        </div>
+        <div class="passenger-info">
+          <strong>Carlos Méndez</strong>
+        </div>
+        <div class="request-message">
+          Waiting for driver confirmation on this trip request.
+        </div>
+        <div class="request-footer">
+          <span class="sent-date">Sent on 04/03 at 10:30 AM</span>
+          <div class="action-buttons">
+            <button mat-icon-button class="people-btn" matTooltip="People">
+              <mat-icon>people</mat-icon>
+            </button>
+            <button mat-icon-button class="mail-btn" matTooltip="Mail">
+              <mat-icon>mail</mat-icon>
+            </button>
+            <button mat-icon-button class="person-btn" matTooltip="Person">
+              <mat-icon>person</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+
+      <!-- Card 3 -->
+      <mat-card class="request-card">
+        <div class="request-header">
+          <span class="request-status rejected">Request Rejected</span>
+          <span class="trip-requests">8 requests for the trip</span>
+        </div>
+        <div class="trip-info">
+          <strong>Trip:</strong> UNI - 26/05 -16:45
+        </div>
+        <div class="passenger-info">
+          <strong>María López</strong>
+        </div>
+        <div class="request-message">
+          This request was rejected by the system administrator.
+        </div>
+        <div class="request-footer">
+          <span class="sent-date">Sent on 05/03 at 3:20 PM</span>
+          <div class="action-buttons">
+            <button mat-icon-button class="people-btn" matTooltip="People">
+              <mat-icon>people</mat-icon>
+            </button>
+            <button mat-icon-button class="mail-btn" matTooltip="Mail">
+              <mat-icon>mail</mat-icon>
+            </button>
+            <button mat-icon-button class="person-btn" matTooltip="Person">
+              <mat-icon>person</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+
+    <!-- Columna Derecha -->
+    <div class="cards-column">
+      <!-- Card 4 -->
+      <mat-card class="request-card">
+        <div class="request-header">
+          <span class="request-status completed">Request Completed</span>
+          <span class="trip-requests">30 requests for the trip</span>
+        </div>
+        <div class="trip-info">
+          <strong>Trip:</strong> UPC - 27/05 -11:00
+        </div>
+        <div class="passenger-info">
+          <strong>Juan Pérez</strong>
+        </div>
+        <div class="request-message">
+          Trip was successfully completed by the driver.
+        </div>
+        <div class="request-footer">
+          <span class="sent-date">Sent on 06/03 at 9:15 AM</span>
+          <div class="action-buttons">
+            <button mat-icon-button class="people-btn" matTooltip="People">
+              <mat-icon>people</mat-icon>
+            </button>
+            <button mat-icon-button class="mail-btn" matTooltip="Mail">
+              <mat-icon>mail</mat-icon>
+            </button>
+            <button mat-icon-button class="person-btn" matTooltip="Person">
+              <mat-icon>person</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+
+      <!-- Card 5 -->
+      <mat-card class="request-card">
+        <div class="request-header">
+          <span class="request-status canceled">Request Canceled</span>
+          <span class="trip-requests">5 requests for the trip</span>
+        </div>
+        <div class="trip-info">
+          <strong>Trip:</strong> UPC - 28/05 -14:30
+        </div>
+        <div class="passenger-info">
+          <strong>Laura García</strong>
+        </div>
+        <div class="request-message">
+          Passenger canceled this trip request.
+        </div>
+        <div class="request-footer">
+          <span class="sent-date">Sent on 07/03 at 2:45 PM</span>
+          <div class="action-buttons">
+            <button mat-icon-button class="people-btn" matTooltip="People">
+              <mat-icon>people</mat-icon>
+            </button>
+            <button mat-icon-button class="mail-btn" matTooltip="Mail">
+              <mat-icon>mail</mat-icon>
+            </button>
+            <button mat-icon-button class="person-btn" matTooltip="Person">
+              <mat-icon>person</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+
+      <!-- Card 6 -->
+      <mat-card class="request-card">
+        <div class="request-header">
+          <span class="request-status confirmed">Request Confirmed</span>
+          <span class="trip-requests">18 requests for the trip</span>
+        </div>
+        <div class="trip-info">
+          <strong>Trip:</strong> UPC - 29/05 -10:00
+        </div>
+        <div class="passenger-info">
+          <strong>Pedro Sánchez</strong>
+        </div>
+        <div class="request-message">
+          New request confirmed for this trip.
+        </div>
+        <div class="request-footer">
+          <span class="sent-date">Sent on 08/03 at 11:30 AM</span>
+          <div class="action-buttons">
+            <button mat-icon-button class="people-btn" matTooltip="People">
+              <mat-icon>people</mat-icon>
+            </button>
+            <button mat-icon-button class="mail-btn" matTooltip="Mail">
+              <mat-icon>mail</mat-icon>
+            </button>
+            <button mat-icon-button class="person-btn" matTooltip="Person">
+              <mat-icon>person</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+</div>

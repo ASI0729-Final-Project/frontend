@@ -1,7 +1,7 @@
 <div class="quote-search-container">
     <div class="input-group">
-        <label>Starting Point</label>
-        <input type="text" placeholder="From" [(ngModel)]="from" />
+      <label>{{ 'STARTING_POINT' | translate }}</label>
+      <input type="text" [placeholder]="'FROM' | translate" [(ngModel)]="from" />
     </div>
   
     <div class="icon-swap">
@@ -9,20 +9,22 @@
     </div>
   
     <div class="input-group">
-        <label>Destination</label>
-        <input type="text" placeholder="To" [(ngModel)]="to" />
+      <label>{{ 'DESTINATION' | translate }}</label>
+      <input type="text" [placeholder]="'TO' | translate" [(ngModel)]="to" />
     </div>
   
     <div class="input-group">
-        <label>Departure Date</label>
-        <input type="date" [(ngModel)]="date" />
+      <label>{{ 'DEPARTURE_DATE' | translate }}</label>
+      <input type="date" [(ngModel)]="date" />
     </div>
   
     <div class="input-group">
-        <label>Departure Time</label>
-        <input type="time" [(ngModel)]="time" />
+      <label>{{ 'DEPARTURE_TIME' | translate }}</label>
+      <input type="time" [(ngModel)]="time" />
     </div>
   
-    <button class="find-button" (click)="onSearch()">Find</button>
+    <button class="find-button" (click)="onSearch()">
+      {{ 'FIND' | translate }}
+    </button>
   </div>
   

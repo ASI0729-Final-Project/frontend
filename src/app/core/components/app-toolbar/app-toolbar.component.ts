@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core'
 
 @Component({
   selector: 'app-toolbar',
@@ -22,7 +23,9 @@ import { NgIf } from '@angular/common';
   styleUrl: './app-toolbar.component.css'
 })
 export class AppToolbarComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, public translate: TranslateService) {}
+
+  
 
   goToProfile() {
     this.router.navigate(['/profile']);
@@ -43,6 +46,6 @@ export class AppToolbarComponent {
 
   setLanguage(lang: string) {
     console.log('Cambiar idioma a:', lang);
-    // Se implementará luego con i18n
+    this.translate.use(lang);
   }
 }

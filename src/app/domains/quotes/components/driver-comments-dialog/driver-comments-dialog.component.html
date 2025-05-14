@@ -1,4 +1,4 @@
-<h2>Comments</h2>
+<h2>{{ 'COMMENTS' | translate }}</h2>
 
 <div class="header">
   <img class="driver-img" [src]="data.driverImage" alt="Driver Image" />
@@ -8,12 +8,12 @@
     <div class="stars">
       <mat-icon *ngFor="let i of [1,2,3,4,5]">star</mat-icon>
     </div>
-    <p class="reviews">{{ data.totalReviews }} reviews</p>
-    <p class="trips">{{ data.completedTrips }} Completed Trips</p>
+    <p class="reviews">{{ data.totalReviews }} {{ 'REVIEWS' | translate }}</p>
+    <p class="trips">{{ data.completedTrips }} {{ 'COMPLETED_TRIPS' | translate }}</p>
   </div>
 
   <select class="rating-filter" [(ngModel)]="selectedRating" (change)="filterByRating()">
-    <option value="">Rating</option>
+    <option value="">{{ 'RATING' | translate }}</option>
     <option *ngFor="let r of [5,4,3,2,1]" [value]="r">
       {{ '★'.repeat(r) }}
     </option>

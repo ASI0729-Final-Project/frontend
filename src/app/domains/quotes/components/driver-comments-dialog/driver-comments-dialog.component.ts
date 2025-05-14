@@ -5,10 +5,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommentCardComponent } from '../../../../shared/components/comment-card/comment-card.component';
 import { QuoteService } from '../../services/quote.service';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-driver-comments-dialog',
-  imports: [CommonModule,MatIconModule, CommentCardComponent, FormsModule],
+  imports: [CommonModule,MatIconModule, CommentCardComponent, FormsModule,TranslateModule],
   templateUrl: './driver-comments-dialog.component.html',
   styleUrl: './driver-comments-dialog.component.css'
 })

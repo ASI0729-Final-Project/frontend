@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-reserve-dialog',
@@ -15,7 +16,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatDialogModule,
     MatRadioModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    TranslateModule
   ],
   templateUrl: './reserve-dialog.component.html',
   styleUrl: './reserve-dialog.component.css'

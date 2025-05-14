@@ -7,6 +7,8 @@ import { ReserveDialogComponent } from '../reserve-dialog/reserve-dialog.compone
 import { MatDialog } from '@angular/material/dialog';
 import { DriverCommentsDialogComponent } from '../driver-comments-dialog/driver-comments-dialog.component';
 
+import { TranslateModule } from '@ngx-translate/core'
+
 
 @Component({
   selector: 'app-quote-card',
@@ -16,7 +18,8 @@ import { DriverCommentsDialogComponent } from '../driver-comments-dialog/driver-
     MatCardModule,
     MatIconModule,
     MatButtonModule,
-    ReserveDialogComponent
+    ReserveDialogComponent,
+    TranslateModule
   ],
   templateUrl: './quote-card.component.html',
   styleUrl: './quote-card.component.css'

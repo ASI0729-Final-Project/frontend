@@ -1,19 +1,35 @@
 <mat-toolbar color="primary" class="toolbar">
     <div class="left">
-        <img src="" alt="nango logo" class="logo">
-        <nav class="nav-links">
-            <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true}">Home</a>
-            <a mat-button routerLink="/quotes" routerLinkActive="active-link">Quotes</a>
-            <a mat-button routerLink="/history" routerLinkActive="active-link">History</a>
-        </nav>
+      <img src="assets/logo.png" alt="nango logo" class="logo">
+      <nav class="nav-links">
+        <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a mat-button routerLink="/quotes" routerLinkActive="active-link">Quotes</a>
+        <a mat-button routerLink="/history" routerLinkActive="active-link">History</a>
+      </nav>
     </div>
-    <div>
-        <button mat-icon-button>
-            <mat-icon>notifications</mat-icon>
-        </button>
+  
+    <div class="right">
+      <button mat-icon-button>
+        <mat-icon>notifications</mat-icon>
+      </button>
+  
+      <button mat-button [matMenuTriggerFor]="userMenu">
         <span class="username">Rosario Rojar</span>
-        <button mat-icon-button>
-            <mat-icon>account_circle</mat-icon>
-        </button>
+        <mat-icon>account_circle</mat-icon>
+      </button>
     </div>
-</mat-toolbar>
+  </mat-toolbar>
+  
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="goToProfile()">My Profile</button>
+    <button mat-menu-item (click)="changePassword()">Change Password</button>
+    <button mat-menu-item [matMenuTriggerFor]="languageMenu">Language</button>
+    <button mat-menu-item (click)="support()">Support</button>
+    <button mat-menu-item (click)="logout()">Log Out</button>
+  </mat-menu>
+  
+  <mat-menu #languageMenu="matMenu">
+    <button mat-menu-item (click)="setLanguage('en')">English (US)</button>
+    <button mat-menu-item (click)="setLanguage('es')">Spanish (Latam)</button>
+  </mat-menu>
+  

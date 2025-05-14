@@ -1,0 +1,40 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ 'PASSWORD_RECOVERY' | translate }}</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content style="background-color: white;">
+      <p>{{ 'PASSWORD_RECOVERY_DESCRIPTION' | translate }}</p>
+      
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>{{ 'NEW_PASSWORD' | translate }}</mat-label>
+        <input matInput type="password" [(ngModel)]="newPassword" 
+               placeholder="{{ 'NEW_PASSWORD' | translate }}" name="newPassword">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>{{ 'CONFIRM_PASSWORD' | translate }}</mat-label>
+        <input matInput type="password" [(ngModel)]="confirmPassword" 
+               placeholder="{{ 'CONFIRM_PASSWORD' | translate }}" name="confirmPassword">
+      </mat-form-field>
+
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage | translate }}
+      </div>
+
+      <div *ngIf="successMessage" class="success-message">
+        {{ successMessage | translate }}
+      </div>
+
+      <div class="button-group">
+        <button mat-raised-button color="primary" class="save-button" (click)="onSubmit()">
+          {{ 'SAVE' | translate }}
+        </button>
+        <button mat-stroked-button color="primary" class="cancel-button" routerLink="/login">
+          {{ 'CANCEL' | translate }}
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

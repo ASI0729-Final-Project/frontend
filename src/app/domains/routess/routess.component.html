@@ -1,0 +1,14 @@
+<h2>Routess</h2>
+<app-routess-search (search)="onSearchFilter($event)"></app-routess-search>
+<div class="routess-list">
+  <app-routes-card
+    *ngFor="let route of routess"
+    [origin]="route.origin"
+    [destination]="route.destination"
+    [date]="route.date"
+    [time]="route.time"
+    [price]="route.price"
+    [seats]="route.seats">
+  </app-routes-card>
+</div>
+

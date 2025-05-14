@@ -1,0 +1,52 @@
+.routess-search-container {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  padding: 16px;
+  background-color: #cfe3d8;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.input-group input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 180px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.icon-swap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.icon-swap mat-icon {
+  font-size: 24px;
+}
+
+.routess-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0e2b28;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+

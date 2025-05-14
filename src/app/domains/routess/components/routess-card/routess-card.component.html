@@ -1,0 +1,28 @@
+<div class="card">
+  <mat-card class="routess-card">
+    <mat-card-content>
+      <div class="origin-destination">
+        <p class="location">{{ origin }}</p>
+        <mat-icon class="direction-icon">swap_vert</mat-icon>
+        <p class="location">{{ destination }}</p>
+      </div>
+      <div class="details">
+        <p><strong>{{ 'DEPARTURE_DATE' | translate }}:</strong> {{ date }}</p>
+        <p><strong>{{ 'DEPARTURE_TIME' | translate }}:</strong> {{ time }}</p>
+        <p><strong>{{ 'GROUP_FARE' | translate }}:</strong> S/.{{ price }}</p>
+        <p><strong>{{ 'AVAILABLE_SEATS' | translate }}:</strong> {{ seats }}</p>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-flat-button class="view-btn">
+        {{ 'VIEW_REQUEST' | translate }}
+      </button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>
+
+
+
+

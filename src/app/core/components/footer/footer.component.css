@@ -1,0 +1,28 @@
+.footer {
+  background-color: #398151;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.footer-center a {
+  font-size: 6rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

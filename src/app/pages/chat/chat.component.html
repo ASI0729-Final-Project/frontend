@@ -1,0 +1,48 @@
+<div class="chat-wrapper">
+  <div class="chat-sidebar">
+    <h1 class="chat-title">Chat</h1>
+    <mat-form-field appearance="outline" class="filter-dropdown">
+      <mat-select placeholder="Trip status">
+        <mat-option value="All">All</mat-option>
+        <mat-option value="Completed">Completed</mat-option>
+        <mat-option value="Confirmed">Confirmed</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-card
+      class="trip-card"
+      *ngFor="let trip of trips; let i = index"
+      [class.highlighted]="i === 0"
+    >
+      <mat-card-title>UNI - {{ trip.date }} {{ trip.time }}</mat-card-title>
+      <mat-card-content>
+        <p>Trip confirmed</p>
+        <p *ngFor="let user of trip.users">
+          {{ user.name }} <span class="role">{{ user.role }}</span>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+  <div class="chat-panel">
+    <div class="chat-header">
+      <mat-icon class="chat-avatar">person</mat-icon>
+      <span class="chat-trip-info">UNI - Junior Castillo</span>
+    </div>
+
+    <div class="chat-messages">
+      <div class="message received">Good evening guys, be on time tomorrow to avoid traffic.</div>
+      <div class="message sent">I'll be there</div>
+    </div>
+
+
+    <div class="chat-input-wrapper">
+      <input matInput placeholder="Write a message" class="chat-input-field" />
+      <button mat-icon-button class="chat-send-button">
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+

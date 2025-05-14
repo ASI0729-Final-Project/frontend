@@ -6,12 +6,18 @@ import { LoginFormComponent } from './domains/users/components/login-form/login-
 import { RegisterFormComponent } from './domains/users/components/register-form/register-form.component';
 import { PassrecoFormComponent } from './domains/users/components/passreco-form/passreco-form.component';
 import { RequestComponent } from './domains/request/RequestManagementComponent/request.component';
+import { RoutesComponent } from './domains/routess/routess.component';
+import { SupportComponent } from './pages/support/support.component';
+import { ChatComponent } from './pages/chat/chat.component';
 
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
     { path: 'quotes', component: QuotesComponent },
     { path: 'history', component: HistoryComponent },
     { path: 'request', component: RequestComponent },
+    { path: 'routess', component: RoutesComponent },
+    { path: 'support', component: SupportComponent },
+    { path: 'chat', component: ChatComponent },
     { path: 'login', component: LoginFormComponent },
     { path: 'register', component: RegisterFormComponent },
     { path: 'password-recovery', component: PassrecoFormComponent },

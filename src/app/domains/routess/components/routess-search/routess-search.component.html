@@ -1,0 +1,39 @@
+<div class="routess-search-container">
+  <div class="input-group">
+    <label>{{ 'STARTING_POINT' | translate }}</label>
+    <input type="text" [placeholder]="'FROM' | translate" [(ngModel)]="from" />
+  </div>
+
+  <div class="icon-swap">
+    <mat-icon>swap_vert</mat-icon>
+  </div>
+
+  <div class="input-group">
+    <label>{{ 'DESTINATION' | translate }}</label>
+    <input type="text" [placeholder]="'TO' | translate" [(ngModel)]="to" />
+  </div>
+
+  <div class="input-group">
+    <label>{{ 'DEPARTURE_DATE' | translate }}</label>
+    <input type="date" [(ngModel)]="date" />
+  </div>
+
+  <div class="input-group">
+    <label>{{ 'DEPARTURE_TIME' | translate }}</label>
+    <input type="time" [(ngModel)]="time" />
+  </div>
+
+  <div class="input-group">
+    <label>{{ 'GROUP_FARE' | translate }}</label>
+    <input type="number" [(ngModel)]="price" min="0" step="0.1" />
+  </div>
+
+  <div class="input-group">
+    <label>{{ 'AVAILABLE_SEATS' | translate }}</label>
+    <input type="number" [(ngModel)]="seat" min="1" step="1" />
+  </div>
+
+  <button class="routess-button" (click)="onSearch()">
+    {{ 'GENERATE' | translate }}
+  </button>
+</div>

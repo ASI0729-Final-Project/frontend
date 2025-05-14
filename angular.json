@@ -19,6 +19,7 @@
           "options": {
             "outputPath": "dist/nango-frontend",
             "index": "src/index.html",
+            "baseHref": "/frontend/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -43,12 +44,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumError": "2MB"
                 }
               ],
               "outputHashing": "all"
@@ -96,6 +97,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

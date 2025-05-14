@@ -1,1 +1,85 @@
-<p>history works!</p>
+<h2>History</h2>
+<!--reschedule-->
+<div class="reschedule-container">
+  <button class="open-popup-btn" (click)="openPopup()">
+    Reschedule
+  </button>
+
+  <div class="popup-backdrop" *ngIf="showPopup" (click)="closePopup()"></div>
+
+  <div class="popup-content" *ngIf="showPopup">
+    <div class="header-section">
+      <h2 class="popup-title">Reschedule</h2>
+      <button class="close-btn" (click)="closePopup()">×</button>
+    </div>
+
+    <div class="driver-section">
+      <img src="https://i.imgur.com/JKvQ0Zs.png" alt="Driver" class="driver-avatar">
+      <div class="driver-info">
+        <h3>Junior Castillo</h3>
+        <div class="rating">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">☆</span>
+          <span class="rating-text">4.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trip-details">
+      <div class="detail-row">
+        <span class="detail-label">Starting Point:</span>
+        <span class="detail-value">Mercado Unicachi, Los Olivos</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-label">Destination:</span>
+        <span class="detail-value">Universidad Nacional de Ingeniería (UNI), Rímac</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-label">Departure Date:</span>
+        <span class="detail-value">24/05</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-label">Departure Time:</span>
+        <span class="detail-value">13:30</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-label">Estimated price:</span>
+        <span class="detail-value">$/18</span>
+      </div>
+    </div>
+
+    <div class="map-section">
+
+    </div>
+
+    <div class="payment-section">
+      <h4 class="section-title">Payment method:</h4>
+      <div class="payment-options">
+        <label class="payment-option">
+          <input type="checkbox" class="checkbox"> Yape
+        </label>
+        <label class="payment-option">
+          <input type="checkbox" class="checkbox"> Plin
+        </label>
+        <label class="payment-option">
+          <input type="checkbox" class="checkbox"> Sencillo
+        </label>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="action-btn reschedule" (click)="closePopup()">Reschedule</button>
+      <button class="action-btn cancel" (click)="closePopup()">Cancel</button>
+      <button class="action-btn report" (click)="closePopup()">Report</button>
+    </div>
+  </div>
+</div>
+<!--fin de reschedule-->
+

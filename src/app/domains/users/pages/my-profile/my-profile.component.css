@@ -1,0 +1,80 @@
+.profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    font-family: 'Arial', sans-serif;
+    color: #0f2c32;
+  }
+  
+  .profile-left {
+    flex: 1;
+  }
+  
+  .profile-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .profile-field {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+  
+  .profile-field strong {
+    font-weight: bold;
+  }
+  
+  .badge {
+    background-color: #388e3c;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 10px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+  }
+  
+  .profile-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ddd;
+  }
+  
+  .edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+  
+  .profile-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .profile-buttons button {
+    min-width: 100px;
+  }
+  

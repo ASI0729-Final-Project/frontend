@@ -2,11 +2,31 @@
     <div class="left">
       <img src="assets/logo.png" alt="nango logo" class="logo">
       <nav class="nav-links">
-        <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-        <a mat-button routerLink="/quotes" routerLinkActive="active-link">Quotes</a>
-        <a mat-button routerLink="/history" routerLinkActive="active-link">History</a>
-        <a mat-button routerLink="/request" routerLinkActive="active-link">Request</a>
+        <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+          {{ 'HOME' | translate }}
+        </a>
+      
+        <ng-container *ngIf="userRole === 'student' || userRole === 'passenger'">
+          <a mat-button routerLink="/quotes" routerLinkActive="active-link">
+            {{ 'QUOTES' | translate }}
+          </a>
+        </ng-container>
+      
+        <ng-container *ngIf="userRole === 'driver'">
+          <a mat-button routerLink="/routes" routerLinkActive="active-link">
+            {{ 'ROUTES' | translate }}
+          </a>
+          <a mat-button routerLink="/request" routerLinkActive="active-link">
+            {{ 'REQUESTS' | translate }}
+          </a>
+        </ng-container>
+      
+        <a mat-button routerLink="/history" routerLinkActive="active-link">
+          {{ 'HISTORY' | translate }}
+        </a>
       </nav>
+      
+      
     </div>
 
     <div class="right">
@@ -15,18 +35,18 @@
       </button>
 
       <button mat-button [matMenuTriggerFor]="userMenu">
-        <span class="username">Rosario Rojar</span>
+        <span class="username">{{ userName }}</span>
         <mat-icon>account_circle</mat-icon>
       </button>
     </div>
   </mat-toolbar>
 
   <mat-menu #userMenu="matMenu">
-    <button mat-menu-item (click)="goToProfile()">My Profile</button>
-    <button mat-menu-item (click)="changePassword()">Change Password</button>
-    <button mat-menu-item [matMenuTriggerFor]="languageMenu">Language</button>
-    <button mat-menu-item (click)="support()">Support</button>
-    <button mat-menu-item (click)="logout()">Log Out</button>
+    <button mat-menu-item (click)="goToProfile()">{{ 'MY_PROFILE' | translate }}</button>
+    <button mat-menu-item (click)="changePassword()">{{ 'CHANGE_PASSWORD' | translate }}</button>
+    <button mat-menu-item [matMenuTriggerFor]="languageMenu">{{ 'LANGUAGE' | translate }}</button>
+    <button mat-menu-item (click)="support()">{{ 'SUPPORT' | translate }}</button>
+    <button mat-menu-item (click)="logout()">{{ 'LOG_OUT' | translate }}</button>
   </mat-menu>
 
   <mat-menu #languageMenu="matMenu">

@@ -56,6 +56,26 @@
     "REQUIRED_FIELD": "Este campo es requerido",
     "PASSWORD_RECOVERY_DESCRIPTION":"Ha solicitado una actualización de contraseña. Complete este formulario para reemplazar su contraseña anterior.",
     "REGISTRATION_FAILED": "Registro fallido. Por favor intente nuevamente.",
-    "REGISTRATION_ERROR": "Ocurrió un error durante el registro."
+    "REGISTRATION_ERROR": "Ocurrió un error durante el registro.",
+    "MY_PROFILE": "Mi Perfil",
+    "CHANGE_PASSWORD": "Cambiar Contraseña",
+    "LANGUAGE": "Idioma",
+    "SUPPORT": "Soporte",
+    "LOG_OUT": "Cerrar Sesión",
+    "REQUESTS": "Solicitudes",
+    "DNI": "DNI",
+    "UNIVERSITY_ID": "ID Universitario",
+    "PHONE": "Número de Teléfono",
+    "PLAN": "Plan",
+    "EDIT": "Editar",
+    "CONFIRM": "Confirmar",
+    "CHANGE_PASSWORD_DESCRIPTION": "You have requested a password update. Complete this form to replace your old password.",
+    "ENTER_NEW_PASSWORD": "Enter your new password",
+    "ENTER_PASSWORD": "Enter your password",
+    "UNIVERSITY": "Universidad",
+    "STUDENT_ID": "ID Universitario",
+    "LICENSE_TYPE": "Tipo de Licencia",
+    "CAR_MODEL": "Modelo de auto",
+    "ROUTES": "Rutas"
   }
   

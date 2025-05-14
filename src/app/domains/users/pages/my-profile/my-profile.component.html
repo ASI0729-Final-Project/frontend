@@ -1,0 +1,49 @@
+<div class="profile-container">
+    <div class="profile-left">
+      <h2 class="profile-title">{{ 'MY_PROFILE' | translate }}</h2>
+  
+      <!-- Rol: Driver -->
+      <ng-container *ngIf="user?.Rol === 'driver'">
+        <p class="profile-field"><strong>{{ 'LICENSE_TYPE' | translate }}:</strong> <span class="badge">✔ {{ 'APPROVED' | translate }}</span></p>
+      </ng-container>
+  
+      <!-- Rol: Student -->
+      <ng-container *ngIf="user?.Rol === 'student' || user?.Rol === 'passenger'">
+        <p class="profile-field"><strong>{{ 'DNI' | translate }}:</strong> <span class="badge">✔ {{ 'APPROVED' | translate }}</span></p>
+        <p class="profile-field"><strong>{{ 'UNIVERSITY_ID' | translate }}:</strong> <span class="badge">✔ {{ 'APPROVED' | translate }}</span></p>
+      </ng-container>
+  
+      <!-- Info común -->
+      <p class="profile-field"><strong>{{ 'NAME' | translate }}:</strong> {{ user?.Name }} {{ user?.LastName }}</p>
+      <p class="profile-field"><strong>{{ 'EMAIL' | translate }}:</strong> {{ user?.Email }}</p>
+      <p class="profile-field"><strong>{{ 'PHONE' | translate }}:</strong> {{ user?.Phone }}</p>
+  
+      <!-- Info específica -->
+      <ng-container *ngIf="user?.Rol === 'driver'">
+        <p class="profile-field"><strong>{{ 'PLAN' | translate }}:</strong> {{ user?.Plan || 'Basic' }}</p>
+        <p class="profile-field"><strong>{{ 'CAR_MODEL' | translate }}:</strong> {{ user?.CarBrand }}</p>
+        <p class="profile-field"><strong>{{ 'LICENSE_PLATE' | translate }}:</strong> {{ user?.LicensePlate }}</p>
+      </ng-container>
+  
+      <ng-container *ngIf="user?.Rol === 'student' || user?.Rol === 'passenger'">
+        <p class="profile-field"><strong>{{ 'PLAN' | translate }}:</strong> {{ user?.Plan || 'Premium' }}</p>
+        <p class="profile-field"><strong>{{ 'UNIVERSITY' | translate }}:</strong> {{ user?.University }}</p>
+        <p class="profile-field"><strong>{{ 'STUDENT_ID' | translate }}:</strong> {{ user?.StudentID }}</p>
+      </ng-container>
+  
+      <!-- Botones -->
+      <div class="profile-buttons">
+        <button mat-flat-button color="primary">{{ 'EDIT' | translate }}</button>
+        <button mat-stroked-button>{{ 'CONFIRM' | translate }}</button>
+      </div>
+    </div>
+  
+    <!-- Foto de perfil -->
+    <div class="profile-right">
+      <img class="profile-image" src="assets/placeholder.jpg" alt="Profile Photo" />
+      <mat-icon class="edit-icon">edit</mat-icon>
+    </div>
+  </div>
+  
+  
+  

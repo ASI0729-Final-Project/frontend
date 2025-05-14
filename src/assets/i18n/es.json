@@ -76,6 +76,11 @@
     "STUDENT_ID": "ID Universitario",
     "LICENSE_TYPE": "Tipo de Licencia",
     "CAR_MODEL": "Modelo de auto",
-    "ROUTES": "Rutas"
+    "ROUTES": "Rutas",
+    "GROUP_FARE": "Tarifa de Grupo",
+    "AVAILABLE_SEATS": "Asientos disponibles",
+    "AVAILABLE_SEAT": "Asientos disponible",
+    "VIEW_REQUEST": "Ver solicitud",
+    "GENERATE": "Generar"
   }
   

@@ -76,7 +76,12 @@
     "STUDENT_ID": "Student ID",
     "LICENSE_TYPE": "License Type",
     "CAR_MODEL": "Car Model",
-    "ROUTES": "Routes"
+    "ROUTES": "Routes",
+    "GROUP_FARE": "Group Fare",
+    "AVAILABLE_SEATS": "Available seats",
+    "GENERATE": "Generate",
+    "AVAILABLE_SEAT": "Available seat",
+    "VIEW_REQUEST": "View request"
   }
   
   

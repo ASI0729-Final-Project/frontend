@@ -1,0 +1,43 @@
+<mat-card class="request-card" [style.border-left]="'4px solid ' + getStatusColor(request.status)">
+  <div class="request-header">
+    <span class="request-status" [style.color]="getStatusColor(request.status)">
+      {{request.status}}
+    </span>
+    <span class="trip-requests" *ngIf="request.requestCount">
+      {{request.requestCount}} requests for the trip
+    </span>
+  </div>
+
+  <div class="trip-info">
+    <strong>Trip:</strong> {{request.trip}}
+  </div>
+
+  <div class="passenger-info">
+    <strong>{{request.passenger}}</strong>
+  </div>
+
+  <div class="request-message">
+    {{request.message}}
+  </div>
+
+  <div class="request-footer">
+    <span class="sent-date">{{request.sentDate}}</span>
+
+    <div class="action-buttons">
+      <button mat-icon-button class="people-btn" matTooltip="People">
+        <mat-icon>people</mat-icon>
+      </button>
+
+      <button mat-icon-button class="mail-btn" matTooltip="Mail">
+        <mat-icon>mail</mat-icon>
+      </button>
+
+      <button mat-icon-button 
+              class="person-btn" 
+              matTooltip="Person"
+              (click)="showComments.emit(request.id)">
+        <mat-icon>person</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-card>

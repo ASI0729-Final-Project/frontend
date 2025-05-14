@@ -1,0 +1,40 @@
+<div *ngIf="loading" class="loading-state">
+  <mat-spinner diameter="50"></mat-spinner>
+  <p>Cargando solicitudes...</p>
+</div>
+
+<div *ngIf="error" class="error-state">
+  <div class="error-content">
+    <mat-icon>error_outline</mat-icon>
+    <div class="error-message">
+      <h3>Error al cargar los datos</h3>
+      <p>{{errorMessage}}</p>
+      <p *ngIf="usingFallbackData">Se están mostrando datos de demostración.</p>
+    </div>
+  </div>
+  <button mat-raised-button
+          color="primary"
+          (click)="reload.emit()">
+    <mat-icon>refresh</mat-icon>
+    Reintentar
+  </button>
+
+  <button mat-button
+          (click)="showDebugInfo = !showDebugInfo"
+          class="toggle-debug">
+    {{showDebugInfo ? 'Ocultar' : 'Mostrar'}} detalles técnicos
+  </button>
+
+  <div *ngIf="showDebugInfo" class="debug-info">
+    <p><strong>Endpoint:</strong> {{apiUrl}}</p>
+    <p><strong>Filtros aplicados:</strong> Type={{selectedType}}, Status={{selectedStatus}}</p>
+  </div>
+</div>
+
+<div *ngIf="!loading && !error && requests?.length === 0" class="no-requests">
+  <mat-icon>info</mat-icon>
+  <p>No se encontraron solicitudes con los filtros actuales</p>
+  <button mat-button (click)="clearFilters.emit()">
+    Limpiar filtros
+  </button>
+</div>

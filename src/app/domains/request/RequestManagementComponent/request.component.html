@@ -1,0 +1,39 @@
+<div class="request-container">
+  <h1>Request Management</h1>
+
+  <app-request-filters
+    [selectedType]="selectedType"
+    (selectedTypeChange)="selectedType = $event"
+    [selectedStatus]="selectedStatus"
+    (selectedStatusChange)="selectedStatus = $event"
+    (filterChange)="loadRequests()"
+    (toggleComments)="toggleCommentsPopup()">
+  </app-request-filters>
+
+  <app-request-status
+    [loading]="loading"
+    [error]="error"
+    [usingFallbackData]="usingFallbackData"
+    [errorMessage]="errorMessage"
+    [apiUrl]="requestService.apiUrl"
+    [selectedType]="selectedType"
+    [selectedStatus]="selectedStatus"
+    (reload)="loadRequests()"
+    (clearFilters)="clearFilters()">
+  </app-request-status>
+
+
+  <app-request-grid
+    *ngIf="!loading && requests.length > 0"
+    [requests]="requests"
+  >
+  </app-request-grid>
+
+
+  <app-comments-popup
+    [visible]="showCommentsPopup"
+    [comments]="comments"
+    (close)="toggleCommentsPopup()"
+    (add)="addComment($event.text, $event.rating)">
+  </app-comments-popup>
+</div>

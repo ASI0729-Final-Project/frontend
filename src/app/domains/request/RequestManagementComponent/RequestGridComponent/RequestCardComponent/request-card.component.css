@@ -1,0 +1,86 @@
+.request-card {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #9e9e9e;
+}
+
+.request-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.request-status {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.trip-requests {
+  font-size: 14px;
+  color: #757575;
+}
+
+.trip-info {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #424242;
+}
+
+.trip-info strong {
+  color: #212121;
+}
+
+.passenger-info {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #212121;
+  font-size: 16px;
+}
+
+.request-message {
+  color: #616161;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.request-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.sent-date {
+  color: #9e9e9e;
+  font-size: 13px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons button {
+  transition: all 0.2s ease;
+}
+
+.action-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.action-buttons mat-icon {
+  font-size: 20px;
+  color: #3f51b5;
+}

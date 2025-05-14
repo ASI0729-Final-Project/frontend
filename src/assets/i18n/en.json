@@ -29,6 +29,35 @@
     "COMMENTS": "Comments",
     "REVIEWS": "reviews",
     "COMPLETED_TRIPS": "Completed Trips",
-    "RATING": "Rating"
+    "RATING": "Rating",
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "PASSWORD_RECOVERY": "Password Recovery",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "REMEMBER_ME": "Remember me",
+    "FORGOT_PASSWORD": "Forgot your password?",
+    "LOGIN_WITH_GOOGLE": "Login with Google",
+    "NAME": "Name",
+    "LAST_NAME": "Last Name",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "USER_PROFILE": "Select your user profile",
+    "DRIVER_PROFILE": "Driver",
+    "PASSENGER_PROFILE": "Passenger",
+    "TERMS_CONDITIONS": "I accept Terms and Conditions",
+    "REGISTER_WITH_GOOGLE": "Register with Google",
+    "HAVE_ACCOUNT": "Do you have an account?",
+    "NEW_PASSWORD": "New password",
+    "SAVE": "Save",
+    "ACCOUNT_EXISTS": "An account with this email already exists",
+    "INVALID_CREDENTIALS": "Invalid email or password",
+    "REGISTRATION_SUCCESS": "Registration successful!",
+    "PASSWORD_MISMATCH": "Passwords do not match",
+    "REQUIRED_FIELD": "This field is required",
+    "PASSWORD_RECOVERY_DESCRIPTION":"You have requested a password update. Complete this form to replace your old password.",
+    "REGISTRATION_FAILED": "Registration failed. Please try again.",
+    "REGISTRATION_ERROR": "An error occurred during registration."
+
   }
+  
   

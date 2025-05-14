@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { QuotesComponent } from './domains/quotes/quotes.component';
-import { HistoryComponent } from './pages/history/history.component';
+import { HistoryComponent } from './domains/history/history.component';
 import { LoginFormComponent } from './domains/users/components/login-form/login-form.component';
 import { RegisterFormComponent } from './domains/users/components/register-form/register-form.component';
 import { PassrecoFormComponent } from './domains/users/components/passreco-form/passreco-form.component';
@@ -25,5 +25,6 @@ export const routes: Routes = [
     { path: 'password-recovery', component: PassrecoFormComponent },
     { path: 'profile', component: MyProfileComponent },
     { path: 'change-password', component: ChangePasswordFormComponent },
+    { path: 'history', component: HistoryComponent},
     { path: "**", redirectTo: '' }
 ];

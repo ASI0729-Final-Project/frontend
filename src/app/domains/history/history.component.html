@@ -1,0 +1,13 @@
+<h2>History</h2>
+<app-history-search (search)="onSearchFilter($event)"></app-history-search>
+<div class="history-list">
+    <app-history-card
+        *ngFor="let h of history"
+        [dataSource]="history"
+        [driver]="h.driver"
+        [from]="h.from"
+        [to]="h.to"
+        [date]="h.date"
+        [hour]="h.hour"
+    ></app-history-card>
+</div>

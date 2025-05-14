@@ -1,0 +1,27 @@
+<div class="history-search-container">
+    
+  <div class="input-group">
+    <label>Departure Time</label>
+    <input type="month" [(ngModel)]="month" />
+  </div>
+
+
+  <div class="input-group">
+    <label>Type</label>
+    <mat-form-field>
+    <mat-label>Type of trip</mat-label>
+    <mat-select>
+      <mat-option value="option">All</mat-option>
+      <mat-option value="option">Student</mat-option>
+      <mat-option value="option">Family</mat-option>
+    </mat-select>
+    <mat-hint align="end">Select one</mat-hint>
+  </mat-form-field>
+  </div>
+
+  <div class="input-group">
+    <label>Travel expenses</label>
+    <input type="pay" [(ngModel)]="pay" />
+  </div>
+<button class="find-button" (click)="onSearch()">Find</button>
+</div>

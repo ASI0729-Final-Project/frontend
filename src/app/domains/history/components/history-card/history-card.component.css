@@ -1,0 +1,36 @@
+.trip-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 16px 0;
+  padding: 16px;
+}
+
+.trip-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.trip-table {
+  flex: 1;
+  min-width: 60%;
+}
+
+.trip-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.trip-actions .state {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.trip-actions .icon-buttons {
+  display: flex;
+  gap: 8px;
+}

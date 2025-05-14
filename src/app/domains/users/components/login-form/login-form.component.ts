@@ -12,6 +12,8 @@ import { UsersService } from '../../services/users.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PasswordResetDialogComponent } from '../password-reset-dialog/password-reset-dialog.component';
 
 @Component({
   selector: 'app-login-form',
@@ -42,7 +44,8 @@ export class LoginFormComponent {
     private fb: FormBuilder,
     private usersService: UsersService,
     private router: Router,
-    public translate: TranslateService
+    public translate: TranslateService,
+    private dialog: MatDialog
   ) {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -68,4 +71,25 @@ export class LoginFormComponent {
       }
     });
   }
+  
+  openResetDialog(): void {
+  const emailControl = this.form.get('email');
+  const email = emailControl?.value;
+
+  if (email && emailControl?.valid) {
+    this.dialog.open(PasswordResetDialogComponent, {
+      data: { email },
+      width: '400px'
+    });
+
+    // Aquí podrías hacer una llamada real al backend si quieres:
+    // this.usersService.sendResetEmail(email).subscribe(...);
+  } else {
+    // Opcional: marcar el campo como "tocado" para que se muestre el error
+    emailControl?.markAsTouched();
+    this.errorMessage = 'REQUIRED_FIELD';
+  }
+}
+
+
 }

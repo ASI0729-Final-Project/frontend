@@ -1,0 +1,25 @@
+.trip-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 0;
+  gap: 24px;
+}
+
+.trip-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.state-label {
+  font-weight: bold;
+}
+
+.extra-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

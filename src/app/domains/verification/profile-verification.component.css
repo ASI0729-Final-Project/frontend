@@ -1,0 +1,63 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+mat-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 32px;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mat-mdc-form-field-infix {
+  border-radius: 8px !important;
+  background-color: #fafafa;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+button[mat-flat-button] {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size:14px;
+}

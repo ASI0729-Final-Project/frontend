@@ -1,0 +1,57 @@
+<table mat-table class="mat-elevation-z2" multiTemplateDataRows>
+
+  <!-- Driver Column -->
+  <ng-container matColumnDef="driver">
+    <th mat-header-cell *matHeaderCellDef> Driver </th>
+    <td mat-cell *matCellDef="let trip"> {{driver}} </td>
+  </ng-container>
+
+  <!-- Starting Point -->
+  <ng-container matColumnDef="startingPoint">
+    <th mat-header-cell *matHeaderCellDef> Starting Point </th>
+    <td mat-cell *matCellDef="let trip"> {{from}} </td>
+  </ng-container>
+
+  <!-- Destination -->
+  <ng-container matColumnDef="destination">
+    <th mat-header-cell *matHeaderCellDef> Destination </th>
+    <td mat-cell *matCellDef="let trip"> {{to}} </td>
+  </ng-container>
+
+  <!-- Date -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let trip"> {{date}} </td>
+  </ng-container>
+
+  <!-- Hour -->
+  <ng-container matColumnDef="hour">
+    <th mat-header-cell *matHeaderCellDef> Hour </th>
+    <td mat-cell *matCellDef="let trip"> {{hour}} </td>
+  </ng-container>
+
+  <!-- Pay -->
+  <ng-container matColumnDef="pay">
+    <th mat-header-cell *matHeaderCellDef> Pay </th>
+    <td mat-cell *matCellDef="let trip"> {{pay}} </td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> State & Actions </th>
+    <td mat-cell *matCellDef="let trip">
+      <div style="display: flex; flex-direction: column; align-items: start; gap: 8px;">
+        <div><strong>{{state}}</strong></div>
+        <button mat-raised-button color="primary">Confirm</button>
+        <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 8px;">
+          <button mat-stroked-button color="accent">Reschedulce</button>
+          <button mat-stroked-button color="warn">Review</button>
+        </div>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

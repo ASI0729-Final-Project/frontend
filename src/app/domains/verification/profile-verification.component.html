@@ -1,0 +1,22 @@
+<mat-card>
+  <h2>{{ 'PROFILE.VERIFICATION'}}</h2>
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'PROFILE.EMAIL' }}</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+
+    <mat-label>{{ 'PROFILE.TYPE' }}</mat-label>
+    <mat-radio-group formControlName="profileType">
+      <mat-radio-button value="Family">{{ 'PROFILE.FAMILY' }}</mat-radio-button>
+      <mat-radio-button value="Estudent">{{ 'PROFILE.ESTUDENT' }}</mat-radio-button>
+    </mat-radio-group>
+
+    <div class="actions">
+      <button mat-flat-button color="primary">{{ 'COMMON.CONFIRM'}}</button>
+      <button mat-stroked-button>{{ 'COMMON.CANCEL'}}</button>
+    </div>
+  </form>
+</mat-card>
+
+

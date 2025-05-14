@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th.mat-header-cell, td.mat-cell {
+  text-align: left;
+  padding: 12px;
+}
+
+td.mat-cell > div {
+  align-items: start;
+}

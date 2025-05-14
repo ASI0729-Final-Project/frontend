@@ -5,21 +5,22 @@
         <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         <a mat-button routerLink="/quotes" routerLinkActive="active-link">Quotes</a>
         <a mat-button routerLink="/history" routerLinkActive="active-link">History</a>
+        <a mat-button routerLink="/request" routerLinkActive="active-link">Request</a>
       </nav>
     </div>
-  
+
     <div class="right">
       <button mat-icon-button>
         <mat-icon>notifications</mat-icon>
       </button>
-  
+
       <button mat-button [matMenuTriggerFor]="userMenu">
         <span class="username">Rosario Rojar</span>
         <mat-icon>account_circle</mat-icon>
       </button>
     </div>
   </mat-toolbar>
-  
+
   <mat-menu #userMenu="matMenu">
     <button mat-menu-item (click)="goToProfile()">My Profile</button>
     <button mat-menu-item (click)="changePassword()">Change Password</button>
@@ -27,9 +28,8 @@
     <button mat-menu-item (click)="support()">Support</button>
     <button mat-menu-item (click)="logout()">Log Out</button>
   </mat-menu>
-  
+
   <mat-menu #languageMenu="matMenu">
     <button mat-menu-item (click)="setLanguage('en')">English (US)</button>
     <button mat-menu-item (click)="setLanguage('es')">Spanish (Latam)</button>
   </mat-menu>
-  

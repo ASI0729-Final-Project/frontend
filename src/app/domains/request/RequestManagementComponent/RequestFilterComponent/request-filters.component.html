@@ -1,0 +1,35 @@
+<div class="filter-section-container">
+  <div class="filter-section">
+    <mat-form-field appearance="fill">
+      <mat-label>Type</mat-label>
+      <mat-select [(ngModel)]="selectedType" name="type" (ngModelChange)="onTypeChange($event)">
+        <mat-option *ngFor="let option of filterOptions" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Status</mat-label>
+      <mat-select [(ngModel)]="selectedStatus" name="status" (ngModelChange)="onStatusChange($event)">
+        <mat-option *ngFor="let option of statusOptions" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Date Range</mat-label>
+      <input matInput [matDatepicker]="datePicker" name="dateRange">
+      <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+      <mat-datepicker #datePicker></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-stroked-button
+            class="view-comments-btn"
+            (click)="toggleComments.emit()">
+      <mat-icon>comment</mat-icon>
+      View comments
+    </button>
+  </div>
+</div>

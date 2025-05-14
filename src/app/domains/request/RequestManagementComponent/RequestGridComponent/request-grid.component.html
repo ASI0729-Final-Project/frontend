@@ -1,0 +1,15 @@
+<div class="cards-grid">
+  <div class="cards-column">
+    <app-request-card 
+      *ngFor="let request of requests | slice:0:(requests.length/2)"
+      [request]="request">
+    </app-request-card>
+  </div>
+
+  <div class="cards-column">
+    <app-request-card 
+      *ngFor="let request of requests | slice:(requests.length/2):requests.length"
+      [request]="request">
+    </app-request-card>
+  </div>
+</div>

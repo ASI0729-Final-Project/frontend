@@ -7,3 +7,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding: 0 !important;
     border-radius: 12px;
   }
+
+.home-background {
+  background-image: url('/assets/home-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

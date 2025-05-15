@@ -22,7 +22,6 @@
   margin-bottom: 2px;
 }
 
-/* Inputs normales */
 .input-group input {
   padding: 10px 12px;
   border-radius: 6px;
@@ -33,13 +32,11 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Alineamos el mat-form-field igual que el input */
 .input-group mat-form-field {
   width: 200px;
-  margin-top: 0;  /* fuerza alineación vertical */
+  margin-top: 0;  
 }
 
-/* Botón */
 .find-button {
   height: 42px;
   padding: 0 24px;

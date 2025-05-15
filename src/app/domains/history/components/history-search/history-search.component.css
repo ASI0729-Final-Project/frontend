@@ -1,43 +1,59 @@
 .history-search-container {
-    display: flex;
-    align-items: end;
-    gap: 16px;
-    padding: 16px;
-    background-color: #cfe3d8;
-    border-radius: 8px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 24px;
+  background-color: #d0e3d3;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+
 .input-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-group label {
-    font-weight: 600;
-    font-size: 13px;
-    margin-bottom: 4px;
-  }
-  
-  .input-group input {
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 180px;
-    font-size: 14px;
-    background-color: white;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #0f2c32;
+  margin-bottom: 2px;
+}
+
+/* Inputs normales */
+.input-group input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 200px;
+  font-size: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Alineamos el mat-form-field igual que el input */
+.input-group mat-form-field {
+  width: 200px;
+  margin-top: 0;  /* fuerza alineación vertical */
+}
+
+/* Botón */
 .find-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #0e2b28;
-    color: white;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 16px;
-  }
-  
-  .find-button:hover {
-    background-color: #133a36;
-  }
-  
+  height: 42px;
+  padding: 0 24px;
+  border: none;
+  background-color: #0f2c32;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-top: 22px;
+}
+
+.find-button:hover {
+  background-color: #154944;
+}

@@ -125,18 +125,15 @@ mat-spinner {
 
 .image-container {
   width: 50%;
-  background-color: #e4eceb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .image-container img {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .form-container {

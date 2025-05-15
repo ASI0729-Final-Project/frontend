@@ -1,39 +1,73 @@
 .home-container {
-    /*background-image: url('assets/group.jpg');*/ 
-    background-size: cover;
-    background-position: center;
-    height: calc(100vh - 64px); 
-    position: relative;
-  }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .center-text {
-    text-align: center;
-    color: white;
-  }
-  
+  background-image: url('/assets/home-bg.png'); /* activa tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 64px); /* ajusta si tu toolbar tiene otro alto */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* capa oscura para mejorar contraste */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; /* algo de padding lateral en pantallas pequeñas */
+}
+
+.center-text {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+}
+
+.center-text h1 {
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.center-text p {
+  font-size: 26px;
+  margin-bottom: 32px;
+  font-weight: 400;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.center-text button {
+  background-color: #0F2C32;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.center-text button:hover {
+  background-color: #17414a;
+}
+
+/* Responsive: mejora en pantallas pequeñas */
+@media (max-width: 768px) {
   .center-text h1 {
     font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 8px;
   }
-  
+
   .center-text p {
     font-size: 20px;
-    margin-bottom: 24px;
   }
-  
+
   .center-text button {
-    background-color: #001f2b;
-    color: white;
-    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 20px;
   }
-  
+}
